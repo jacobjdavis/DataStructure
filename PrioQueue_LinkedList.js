@@ -18,7 +18,6 @@ const head = Symbol("head");
 class LL {
     constructor() {
         this[head] = null;
-        this.length = 0;
     }
 
     push(data) {
