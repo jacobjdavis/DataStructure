@@ -27,7 +27,7 @@ class LL {
         Step 3: NEW -> NEXT = HEAD
         Step 4: HEAD = NEW
         Step 5: Set TEMP to head of the list
-        Step 6: While TEMP -> NEXT != NULL and TEMP -> NEXT -> PRIORITY > PRIORITY
+        Step 6: While TEMP -> NEXT != NULL and TEMP -> NEXT -> PRIORITY < PRIORITY
         Step 7: TEMP = TEMP -> NEXT
         [END OF LOOP]
         Step 8: NEW -> NEXT = TEMP -> NEXT
@@ -69,7 +69,7 @@ class LL {
 }
 
 let myLL = new LL;
-myLL.push({prio: 20, value: "A"});
+myLL.push({prio: 200, value: "A"});
 myLL.push({prio: 10, value: "B"});
 myLL.push({prio: 15, value: "C"});
 myLL.push({prio: 100, value: "D"});
