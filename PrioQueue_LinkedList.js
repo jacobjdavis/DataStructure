@@ -39,7 +39,7 @@ class LL {
             this[head] = newNode;
             return;
         }
-        if (this[head].prio() > newNode.prio()) {
+        if (this.newMethod()[head].prio() > newNode.prio()) {
             newNode.next = this[head]; // 3
             this[head] = newNode; // 4
         }
@@ -69,7 +69,6 @@ class LL {
 }
 
 let myLL = new LL;
-myLL.push({prio: 200, value: "A"});
 myLL.push({prio: 10, value: "B"});
 myLL.push({prio: 15, value: "C"});
 myLL.push({prio: 100, value: "D"});
