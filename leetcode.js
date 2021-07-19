@@ -80,6 +80,26 @@ subandprod = (x) => {
     return mul-sum;
 }
 
+function getGaps(arr, gaps) {
+  // find spot of first 1
+  let firstone = arr.indexOf(1);
+  if (firstone !== -1) {
+    let newarr = arr.slice(firstone + 1)
+    // find spot of second 1
+    let secondone = newarr.indexOf(1);
+
+    if (secondone > 0) {
+      gaps.push(secondone);
+    }
+    return getGaps(newarr.slice(secondone+1), gaps)
+  }
+
+  return (gaps.length > 0) ? Math.max.apply(Math, gaps) : 0;
+}
+function solution(n) {
+  let binary = n.toString(2);
+  console.log(n, binary, getGaps(binary,[]))
+}
 
 let J = "aA";
 let S = "aAAsfds";
@@ -98,3 +118,5 @@ for (let i = 0; i < jake.length; i++) {
         console.log(i);
     }, 1000 * i);
 }
+
+solution(9)
